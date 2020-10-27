@@ -9,7 +9,6 @@ ConfVarController::~ConfVarController()
 {
   
 }
-
 //NOTE: the "setCV function will write the CV's to eeprom storage!"
 int ConfVarController::InitConfVars(int DECODERADRESS)
 {
