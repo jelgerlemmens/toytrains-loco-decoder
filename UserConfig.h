@@ -15,7 +15,7 @@
         #endif
 
         //debugging
-       //#define DEBUG
+//       #define DEBUG
         #ifdef DEBUG
           #define SERIALINTERFACE Serial 
         #endif

@@ -5,7 +5,8 @@
 
 namespace AnalogRunCheck
 {
-    bool CheckIfAnalog();        
+    bool CheckIfAnalog(); 
+    bool CheckIfPower();       
 }
 
 namespace AnalogRunControl

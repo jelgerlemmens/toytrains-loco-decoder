@@ -18,22 +18,36 @@ namespace AnalogRunCheck
             posCount++;
           }
         }
-   #ifdef DEBUG   
-        SERIALINTERFACE.println("NEGCOUNT: ");
-        SERIALINTERFACE.print(negCount,DEC);
-        SERIALINTERFACE.println("POSCOUNT: ");
-        SERIALINTERFACE.print(posCount,DEC);
-#endif
+        #ifdef DEBUG   
+            SERIALINTERFACE.println("NEGCOUNT: ");
+            SERIALINTERFACE.print(negCount,DEC);
+            SERIALINTERFACE.println("POSCOUNT: ");
+            SERIALINTERFACE.print(posCount,DEC);
+        #endif
         //check if the pin state fluctuates 
         if(negCount > 0 && posCount > 0){                          
             return false; // is not analog running on a digital signal
         }
-        if(negCount == 0 && posCount > 0){
-            return true; // is analog, no switches to 0 detected. 
+        else if(negCount == 0 && posCount > 0){
+          return CheckIfPower();
         }
-        if(negCount == 0 && posCount == 0){
-            return false; // no power whatsoever, is this thing even on a track?
+        else if(negCount > 0 && posCount == 0){
+          return CheckIfPower();
+        }        
+        else if(negCount == 0 && posCount == 0){
+            return false; // no power whatsoever, this means we are debugging, or at least there is no active track power
         }
+    }
+
+    bool CheckIfPower(){
+      int valueOpsPin1 = analogRead(ANALOG_OPS_PIN_1);
+      int valueOpsPin2 = analogRead(ANALOG_OPS_PIN_2);
+      if(valueOpsPin1  > 0 || valueOpsPin2 > 0){
+        return true;
+      }else{
+        return false;
+      }
+      
     }
 }
 
@@ -44,6 +58,14 @@ namespace AnalogRunControl
     //read pin vals, very often preferably 
     int valueOpsPin1 = analogRead(ANALOG_OPS_PIN_1);
     int valueOpsPin2 = analogRead(ANALOG_OPS_PIN_2);
+
+//      #ifdef DEBUG   
+//        SERIALINTERFACE.println("AnalogOps pin 1: ");
+//        SERIALINTERFACE.print(valueOpsPin1,DEC);
+//        SERIALINTERFACE.println("AnalogOps pin 2: ");
+//        SERIALINTERFACE.print(valueOpsPin2,DEC);
+//      #endif
+
 
     // if both pins are 0, loc is in full stop 
     if(valueOpsPin1 == 0 && valueOpsPin2 == 0){
