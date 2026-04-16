@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "toytrains_decoder_smd-eagle-import") (type "KiCad") (uri "${KIPRJMOD}/toytrains_decoder_smd-eagle-import.kicad_sym") (options "") (descr ""))
+)

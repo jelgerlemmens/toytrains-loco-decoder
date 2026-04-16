@@ -26,6 +26,10 @@ dist/
 # JetBrains IDE
 .idea/
 
+# PlatformIO build artifacts
+.pio/
+**/.pio/
+
 # Unit test reports
 TEST*.xml
 
