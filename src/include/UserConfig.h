@@ -10,8 +10,9 @@
             #define AVAILABLE_FUNCTION_PINS     3,4,5,6,7,8,11,12,13 //list of available pins
             #define MOTOR_OUT_DIR_FWD_PIN       9  //pin for h-bridge motor control forward  Hbridge used: TLE5206, both pins need PWM capability
             #define MOTOR_OUT_DIR_REV_PIN       10 //pin for h-bridge motor control reverse  Hbridge used: TLE5206, both pins need PWM capability
-            #define ANALOG_OPS_PIN_1            A0 //pin used for reading voltage from track, If loco is on analog track, these pins are used to convert power to engine    
+            #define ANALOG_OPS_PIN_1            A0 //pin used for reading voltage from track, If loco is on analog track, these pins are used to convert power to engine
             #define ANALOG_OPS_PIN_2            A1 //pin used for reading voltage from track, If loco is on analog track, these pins are used to convert power to engine
+            #define HORN_PIN                    8  //pin connected to DFPlayer Mini IO_1 — momentary LOW pulse triggers horn
         #endif
 
         //debugging - set via build_flags = -DDEBUG in platformio.ini

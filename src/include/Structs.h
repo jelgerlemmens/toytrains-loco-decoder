@@ -6,6 +6,8 @@
 #define STRUCTSH
 #include <stdint.h>
 
+enum PinType { DIGITAL, MOMENTARY_PULSE };
+
 typedef struct CVPair
 {
     uint8_t CV_ID;
@@ -16,6 +18,7 @@ typedef struct PinPair
 {
     uint8_t Pin_ID;
     uint8_t State;
+    PinType pinType;
 };
 
 //-----------------------------------------------------------------------------------------------------------------------------

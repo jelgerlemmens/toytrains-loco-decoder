@@ -94,7 +94,7 @@ void ExecuteInitialState(){
   Dcc.pin(0, DCC_INPUT_PIN, 0);
   Dcc.init(MAN_ID_DIY, 001, FLAGS_MY_ADDRESS_ONLY, 0);
 
-  int decoderAddressInit = 25; // NMRA DCC primary address (CV_MULTIFUNCTION_PRIMARY_ADDRESS)
+  int decoderAddressInit = 7; // NMRA DCC primary address (CV_MULTIFUNCTION_PRIMARY_ADDRESS)
 
   // write all CVs for decoder to eeprom
   confVarController->InitConfVars(decoderAddressInit);
@@ -173,11 +173,6 @@ void ExecuteAnalogState(){
  */
 void notifyDccSpeed(uint16_t Addr, DCC_ADDR_TYPE AddrType, uint8_t Speed, DCC_DIRECTION Dir, DCC_SPEED_STEPS SpeedSteps)
 {
-  #ifdef DEBUG
-    SERIALINTERFACE.print("Spd:"); SERIALINTERFACE.print(Speed);
-    SERIALINTERFACE.print(" Dir:"); SERIALINTERFACE.print(Dir == DCC_DIR_FWD ? "F" : "R");
-    SERIALINTERFACE.print(" PWM:"); SERIALINTERFACE.println(Speed > 1 ? (Dir == DCC_DIR_FWD ? map(Speed, 2, SpeedSteps, 127, 0) : map(Speed, 2, SpeedSteps, 127, 255)) : 0);
-  #endif
 
   // Speed 0 = emergency stop, Speed 1 = regular stop — HIGH/HIGH = locked brake
   if (Speed == 0 || Speed == 1)
