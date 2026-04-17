@@ -451,7 +451,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -489,7 +489,7 @@
         "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": -1,
+        "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "tuning_profile": "",
@@ -630,12 +630,12 @@
       {
         "filename": "toytrains_decoder_smd.kicad_sch",
         "name": "",
-        "uuid": "4ab0a509-1d79-4aab-a74a-8014b4100cf6"
+        "uuid": "c60adba0-f710-459a-8fc3-4fc68d9886c2"
       },
       {
-        "filename": "toytrains_decoder_smd.kicad_sch",
-        "name": "toytrains_decoder_smd",
-        "uuid": "8624b7ba-1eed-4a83-b74e-2ca9e0b063a2"
+        "filename": "top.kicad_sch",
+        "name": "top",
+        "uuid": "0fc50d6d-e4ff-45f6-883d-fbb3ce82e39a"
       }
     ],
     "used_designators": "",
@@ -643,12 +643,12 @@
   },
   "sheets": [
     [
-      "4ab0a509-1d79-4aab-a74a-8014b4100cf6",
+      "c60adba0-f710-459a-8fc3-4fc68d9886c2",
       ""
     ],
     [
-      "8624b7ba-1eed-4a83-b74e-2ca9e0b063a2",
-      "CAB_decoder_SMD_1"
+      "0fc50d6d-e4ff-45f6-883d-fbb3ce82e39a",
+      "top"
     ]
   ],
   "text_variables": {},
