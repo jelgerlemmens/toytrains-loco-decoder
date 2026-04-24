@@ -1,0 +1,24 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "1ed037bd-95c9-41cc-b355-6ca90e68ac14")
+	(paper "A4")
+	(lib_symbols)
+	(text "https://github.com/nicola-strappazzon/CH552/blob/main/doc/datasheets/CH552.pdf"
+		(exclude_from_sim no)
+		(at 57.912 21.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "fd8f2d0c-ac02-44f5-b361-1470b7a57975")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

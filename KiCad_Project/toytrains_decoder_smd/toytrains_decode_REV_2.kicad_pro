@@ -56,7 +56,6 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
-        "filename": "board_design_settings.json",
         "version": 2
       },
       "rule_severities": {
@@ -125,9 +124,9 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.1524,
+        "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.025,
+        "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
@@ -138,7 +137,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.1524,
+        "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
@@ -451,7 +450,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "error",
+      "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -473,7 +472,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "toytrains_decoder_smd.kicad_pro",
+    "filename": "toytrains_decode_REV_2.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -621,36 +620,22 @@
     "meta": {
       "version": 1
     },
-    "page_layout_descr_file": "empty.kicad_wks",
+    "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
     "subpart_first_id": 65,
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "toytrains_decoder_smd.kicad_sch",
-        "name": "",
-        "uuid": "c60adba0-f710-459a-8fc3-4fc68d9886c2"
-      },
-      {
-        "filename": "top.kicad_sch",
-        "name": "top",
-        "uuid": "0fc50d6d-e4ff-45f6-883d-fbb3ce82e39a"
+        "filename": "toytrains_decode_REV_2.kicad_sch",
+        "name": "toytrains_decode_REV_2",
+        "uuid": "00000000-0000-0000-0000-000000000000"
       }
     ],
-    "used_designators": "R7-9,R15,R19-24,#GND3,#GND8-9,#GND11-12,#GND29,#GND35-47,C3,C5-6,C12,C15,C17-19,ARDUINO_NANO3,AUX\\-5V\\-5-6,B2\\-RECTIFIER2,DCC\\-IN2,D2,D5-6,F13-18,IC3-4,L2,MOTOR_OUT3,OK3,POWER\\-LED2-3,Q13-18",
+    "used_designators": "",
     "variants": []
   },
-  "sheets": [
-    [
-      "c60adba0-f710-459a-8fc3-4fc68d9886c2",
-      ""
-    ],
-    [
-      "0fc50d6d-e4ff-45f6-883d-fbb3ce82e39a",
-      "top"
-    ]
-  ],
+  "sheets": [],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
