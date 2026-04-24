@@ -65,12 +65,10 @@ void PinController::SetPinState(PinPair * pinPair){
       #endif
         if(pinPair->pinType == MOMENTARY_PULSE){
             if(pinPair->State == HIGH){
-                // activation: tone through FET to piezo — two short blasts like a steam whistle
-                tone(pinPair->Pin_ID, 3000, 300);
-                delay(400);
-                tone(pinPair->Pin_ID, 3000, 300);
+                // HIGH → BSS138 on → DFPlayer IO_1 pulled LOW → triggers next track
+                digitalWrite(pinPair->Pin_ID, HIGH);
                 delay(150);
-                noTone(pinPair->Pin_ID);
+                digitalWrite(pinPair->Pin_ID, LOW);
                 pinPair->State = LOW;
             }
             // deactivation: do nothing
